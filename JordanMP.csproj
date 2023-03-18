@@ -1,0 +1,1763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{945622A5-4786-4C52-87F3-624BC6542A09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabFusion</RootNamespace>
+    <AssemblyName>LabFusion</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;MELONLOADER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;MELONLOADER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Callbacks\CallResult.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Callbacks\ICallbackData.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Classes\AuthTicket.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Classes\Dispatch.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Classes\SteamApi.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Classes\SteamGameServer.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Classes\SteamInternal.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Enum\LeaderboardDisplay.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Enum\LeaderboardSort.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Enum\SendType.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\CustomEnums.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamAppList.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamApps.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamClient.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamController.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamFriends.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamGameSearch.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamGameServer.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamGameServerStats.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamHTMLSurface.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamHTTP.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamInput.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamInventory.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmaking.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmakingPingResponse.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmakingPlayersResponse.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmakingRulesResponse.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmakingServerListResponse.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMatchmakingServers.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMusic.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamMusicRemote.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamNetworking.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamNetworkingConnectionCustomSignaling.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamNetworkingCustomSignalingRecvContext.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamNetworkingSockets.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamNetworkingUtils.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamParentalSettings.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamParties.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamRemotePlay.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamRemoteStorage.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamScreenshots.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamTV.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamUGC.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamUser.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamUserStats.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamUtils.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\Interfaces\ISteamVideo.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamCallbacks.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamConstants.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamEnums.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamStructFunctions.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamStructs.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Generated\SteamTypes.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\Connection.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\ConnectionInfo.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\ConnectionManager.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\IConnectionManager.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\ISocketManager.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetAddress.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetDebugFunc.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetErrorMessage.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetIdentity.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetKeyValue.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetMsg.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\NetPingLocation.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\Socket.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\SocketManager.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Networking\SteamDatagramRelayAuthTicket.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\Base.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\Favourites.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\Friends.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\History.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\Internet.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\IpList.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\ServerList\LocalNetwork.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamApps.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamClient.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamFriends.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamInput.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamInventory.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamMatchmaking.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamMatchmakingServers.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamMusic.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamNetworking.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamNetworkingSockets.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamNetworkingUtils.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamParental.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamParties.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamRemotePlay.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamRemoteStorage.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamScreenshots.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamServer.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamServerStats.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamUgc.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamUser.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamUserStats.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamUtils.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\SteamVideo.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Achievement.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\AppId.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Controller.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\DepotId.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\DlcInformation.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\DownloadProgress.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\DurationControl.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\FileDetails.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Friend.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\GameId.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Image.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\InventoryDef.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\InventoryItem.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\InventoryPurchaseResult.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\InventoryRecipe.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\InventoryResult.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Leaderboard.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\LeaderboardEntry.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\LeaderboardUpdate.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Lobby.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\LobbyQuery.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\MatchMakingKeyValuePair.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\NumericalFilter.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\OutgoingPacket.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\P2Packet.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\PartyBeacon.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\RemotePlaySession.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Screenshot.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Server.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\ServerInit.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Stat.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\SteamId.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\SteamIpAddress.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\SteamParamStringArray.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\Ugc.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\UgcEditor.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\UgcItem.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\UgcQuery.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\UgcResultPage.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Structs\UserItemVote.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\Epoch.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\Helpers.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\Platform.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\SourceServerQuery.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\SteamInterface.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\Utf8String.cs" />
+    <Compile Include="Core\dependencies\Facepunch.Steamworks\Utility\Utility.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Entangled\EntangledProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\GamemodeEndEvent.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\GamemodeStartEvent.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Team Deathmatch\SabrelakeSpawnpoint.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Team Deathmatch\LavaGangSpawnpoint.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Deathmatch\DeathmatchSpawnpoint.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Team Deathmatch\TeamDeathmatchProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Gamemodes\Deathmatch\DeathmatchProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Internal\FusionMarrowBehaviour.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\DisableSyncing.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\NotificationProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\BitRewardProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\CrateSpawnerProxy.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Spawners\InfoBoxPlacer.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Spawners\PointShopPlacer.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\SyncGameObjectEnabled.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\AlwaysAllowImpactDamage.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\AutoSyncOnStart.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\Misc\OnlyTriggerOnLocalPlayer.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\UltEvents\InvokeUltEventIfClient.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\UltEvents\InvokeUltEventIfHost.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\UltEvents\InvokeUltEventInServer.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\UltEvents\InvokeUltEventOnLocalOwnership.cs" />
+    <Compile Include="Core\marrow-integration\Runtime\UltEvents\InvokeUltEventOnOtherOwnership.cs" />
+    <Compile Include="Core\src\AssemblyInfo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssemblyInfo.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Core\src\BoneMenu\BoneMenuCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\DebugCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\GamemodesCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\LobbyCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\NotificationCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\BanListCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\PlayerListCreator.cs" />
+    <Compile Include="Core\src\BoneMenu\SettingsCreator.cs" />
+    <Compile Include="Core\src\Data\Containers\FrameSkipper.cs" />
+    <Compile Include="Core\src\Data\Containers\GrabbedGripList.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\GameControllerData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\HolodeckData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\VoidG114Data.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\TimeTrialData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\KartRaceData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\ArenaData.cs" />
+    <Compile Include="Core\src\Data\Containers\ConfigurableJointDriveData.cs" />
+    <Compile Include="Core\src\Data\Containers\DataCorruptionException.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\HubData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\DescentData.cs" />
+    <Compile Include="Core\src\Data\Containers\Grips\SerializedPropGrab.cs" />
+    <Compile Include="Core\src\Data\Containers\Grips\SerializedWorldGrab.cs" />
+    <Compile Include="Core\src\Data\Containers\GripPair.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\HomeData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\LevelData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\MagmaGateData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\MineDiveData.cs" />
+    <Compile Include="Core\src\Data\Containers\Levels\SprintBridgeData.cs" />
+    <Compile Include="Core\src\Data\Containers\PDController.cs" />
+    <Compile Include="Core\src\Data\Containers\Player\RigData.cs" />
+    <Compile Include="Core\src\Data\Containers\Grips\SerializedGrab.cs" />
+    <Compile Include="Core\src\Data\Containers\Player\RigLifeCycleEvents.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedAvatarStats.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedSoftEllipse.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedTriggerRefReference.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedGameObjectReference.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedHand.cs" />
+    <Compile Include="Core\src\Data\Containers\Grips\SerializedPlayerBodyGrab.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedServerSettings.cs" />
+    <Compile Include="Core\src\Data\Containers\SerializedPlayerSettings.cs" />
+    <Compile Include="Core\src\Data\Containers\RigidbodyCache.cs" />
+    <Compile Include="Core\src\Data\Containers\TransformCache.cs" />
+    <Compile Include="Core\src\Data\Containers\Transforms\SerializedSmallQuaternion.cs" />
+    <Compile Include="Core\src\Data\Containers\Transforms\SerializedQuaternion.cs" />
+    <Compile Include="Core\src\Data\Containers\Grips\SerializedStaticGrab.cs" />
+    <Compile Include="Core\src\Data\Containers\Transforms\SerializedLocalTransform.cs" />
+    <Compile Include="Core\src\Data\Containers\Transforms\SerializedTransform.cs" />
+    <Compile Include="Core\src\Data\Files\DataSaver.cs" />
+    <Compile Include="Core\src\Data\Files\EmbeddedAssetBundle.cs" />
+    <Compile Include="Core\src\Data\Files\FusionFileLoader.cs" />
+    <Compile Include="Core\src\Data\Files\BanList.cs" />
+    <Compile Include="Core\src\Data\Files\PermissionList.cs" />
+    <Compile Include="Core\src\Data\Files\SteamAPILoader.cs" />
+    <Compile Include="Core\src\Data\Files\EmbeddedResource.cs" />
+    <Compile Include="Core\src\Data\Files\PersistentData.cs" />
+    <Compile Include="Core\src\Data\Files\ResourcePaths.cs" />
+    <Compile Include="Core\src\Data\Interfaces\IFusionSerializable.cs" />
+    <Compile Include="Core\src\Debugging\FusionDevMode.cs" />
+    <Compile Include="Core\src\Debugging\FusionStopwatch.cs" />
+    <Compile Include="Core\src\Debugging\FusionUnityLogger.cs" />
+    <Compile Include="Core\src\Exceptions\ExpectedClientException.cs" />
+    <Compile Include="Core\src\Exceptions\ExpectedServerException.cs" />
+    <Compile Include="Core\src\Extensions\AlignPlug.cs" />
+    <Compile Include="Core\src\Extensions\Array.cs" />
+    <Compile Include="Core\src\Extensions\Byte.cs" />
+    <Compile Include="Core\src\Extensions\Chunk.cs" />
+    <Compile Include="Core\src\Extensions\Grip.cs" />
+    <Compile Include="Core\src\Extensions\Hand.cs" />
+    <Compile Include="Core\src\Extensions\IEnumerable.cs" />
+    <Compile Include="Core\src\Extensions\Int32.cs" />
+    <Compile Include="Core\src\Extensions\InteractableHost.cs" />
+    <Compile Include="Core\src\Extensions\Joint.cs" />
+    <Compile Include="Core\src\Extensions\Math.cs" />
+    <Compile Include="Core\src\Extensions\PullCordDevice.cs" />
+    <Compile Include="Core\src\Extensions\Quaternion.cs" />
+    <Compile Include="Core\src\Extensions\Transform.cs" />
+    <Compile Include="Core\src\Extensions\SyncableComparer.cs" />
+    <Compile Include="Core\src\Extensions\UnityComparer.cs" />
+    <Compile Include="Core\src\Extensions\UnityObject.cs" />
+    <Compile Include="Core\src\Extensions\Vector3.cs" />
+    <Compile Include="Core\src\Extensions\XElement.cs" />
+    <Compile Include="Core\src\Extensions\ZoneSpawner.cs" />
+    <Compile Include="Core\src\Grabbables\GrabHelper.cs" />
+    <Compile Include="Core\src\Grabbables\InteractableHelpers.cs" />
+    <Compile Include="Core\src\Grabbables\SerializedGrabHandler.cs" />
+    <Compile Include="Core\src\Mod.cs" />
+    <Compile Include="Core\src\MonoBehaviours\DestroyOnDisconnect.cs" />
+    <Compile Include="Core\src\MonoBehaviours\MirrorIdentifier.cs" />
+    <Compile Include="Core\src\MonoBehaviours\PropCollisionSyncer.cs" />
+    <Compile Include="Core\src\MonoBehaviours\CollisionSyncer.cs" />
+    <Compile Include="Core\src\MonoBehaviours\TimedDespawner.cs" />
+    <Compile Include="Core\src\Network\Fallback\EmptyNetworkLayer.cs" />
+    <Compile Include="Core\src\Network\Helpers\LobbyMetadataHelper.cs" />
+    <Compile Include="Core\src\Network\Helpers\MetadataHelper.cs" />
+    <Compile Include="Core\src\Network\Helpers\NetworkVerification.cs" />
+    <Compile Include="Core\src\Network\Helpers\SendRateTable.cs" />
+    <Compile Include="Core\src\Network\INetworkLobby.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\BaseGameControllerMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\TimeTrialGameControllerMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Gamemodes\GamemodeMetadataRemoveMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Gamemodes\GamemodeTriggerResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Gamemodes\GamemodeMetadataSetMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\PowerableJointVoltageMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\TwoButtonRemoteControllerEventMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\FunicularControllerEventMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\SpawnGunPreviewMeshMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Levels\HolodeckEventMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Levels\ZoneEncounterEventMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Levels\LevelRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\PointShop\PointItemTriggerValueMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\PointShop\PointItemTriggerMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\PointShop\PointItemEquipStateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\BodyLogToggleMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepTeleportMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepDamageMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\SDK\GameObjectActiveMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\PermissionCommandRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\PlayerVoiceChatMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\PropSyncableSleepMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Trials\TrialSpawnerEventsMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\BonelabHubMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\DescentIntroMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\HomeMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\KartRaceMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Entities\BehaviourBaseNavMentalMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Entities\BehaviourBaseNavLocoMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Global\SlowMoButtonMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\BoardCreateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\ConstraintDeleteMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\ConstraintCreateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\NimbusGunNoclipMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\FlashlightToggleMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Magazines\KeySlotMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\BodyLogEffectMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepActionMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\PlayerMetadataRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\PlayerMetadataResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\SDK\DynamicsAssignMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\SDK\ModuleMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\ServerSettingsMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\PlayerSettingsMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Spawning\SpawnableCratePlacerMessage.cs" />
+    <Compile Include="Core\src\Network\NetworkLayerDeterminer.cs" />
+    <Compile Include="Core\src\Network\Steam\SpacewarNetworkLayer.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamVRNetworkLayer.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamLobby.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamVoiceIdentifier.cs" />
+    <Compile Include="Core\src\Patching\NativeStructs\Attack_.cs" />
+    <Compile Include="Core\src\Patching\Patches\Attacks\ImpactPropertiesPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\AvatarDicePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\AvatarPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Enemies\BehaviourOmniwheelPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Enemies\BehaviourPowerLegsPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Enemies\BehaviourBaseNavPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Control_GlobalTimePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\GachaPlacerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\BonelabHubPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\BoardGeneratorPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ConstrainerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\BonelabProgressionHelperPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ConstraintTrackerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\DevManipulatorPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\BaseGameControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\GameControl_HolodeckPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\TimeTrial_GameControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\ZoneEncounterPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\ArtRigPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\JimmyDoorControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\RigManagerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\PlayerDamageReceiverPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\RemapRigPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\AmmoPickupPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\FlyingGunPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\KartRacePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Plugs\KeyRecieverPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\HomePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\Trial_SpawnerEventsPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PropFlashlightPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\FunicularControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\PowerableJointPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\SpawnEventsPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Props\TwoButtonRemoteControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PullCordDevicePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Attacks\ImpactSFXPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PullCordForceChangePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\SpawnableCratePlacerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Attacks\StabSlashPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Trigger\GenGameControl_TriggerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Trigger\MirrorPatches.cs" />
+    <Compile Include="Core\src\SDK\Points\AccessoryItem.cs" />
+    <Compile Include="Core\src\SDK\Points\AccessoryItemHelper.cs" />
+    <Compile Include="Core\src\SDK\Points\BitEconomy.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\CardboardDisguise.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\BritishHelm.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\BodyPillow.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\AdventureHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Glasses3D.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\CardboardTophat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\BitsTrail.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\WeirdShades.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\TheBeacon.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\TestItem.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\StormyHead.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\SorcererHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\PieceOfResistance.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\PartyHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\NyanTrail.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Monocle.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\LightningHead.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\LegoHead.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\LaytonHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\KnollHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\KickMeSign.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\GuardHelmet.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Gearhead.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\FryCookHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Fren.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Firework.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Fez.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\EnaHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\EltonGlasses.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Cooler.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\ConstructionHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\CheeseHat.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\CatBeanie.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\WaistRing.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\RubixCube.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\PulsatingMass.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Junktion.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\GloopTrail.cs" />
+    <Compile Include="Core\src\SDK\Points\Built In\Cosmetics\Gemstone.cs" />
+    <Compile Include="Core\src\SDK\Points\PointItem.cs" />
+    <Compile Include="Core\src\SDK\Points\PointItemManager.cs" />
+    <Compile Include="Core\src\SDK\Points\PointSaveManager.cs" />
+    <Compile Include="Core\src\SDK\Points\PointShop.cs" />
+    <Compile Include="Core\src\SDK\Points\PointShopPanelView.cs" />
+    <Compile Include="Core\src\Representation\FusionPermissions.cs" />
+    <Compile Include="Core\src\Representation\PlayerRepManager.cs" />
+    <Compile Include="Core\src\Representation\RigAbstractor.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\TeamDeathmatch.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\TugOWar.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\Entangled.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\BoneBall.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\KartRace.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\SuperSmashBoners.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Built In\Deathmatch.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\Gamemode.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\GamemodeHelper.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\GamemodeManager.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\GamemodePlaylist.cs" />
+    <Compile Include="Core\src\SDK\Gamemodes\GamemodeRegistration.cs" />
+    <Compile Include="Core\src\SDK\Network\Messages\ModuleMessageHandler.cs" />
+    <Compile Include="Core\src\Senders\Props\PowerableSender.cs" />
+    <Compile Include="Core\src\Senders\Level\HolodeckSender.cs" />
+    <Compile Include="Core\src\Senders\Level\ZoneSender.cs" />
+    <Compile Include="Core\src\Senders\Misc\PointItemSender.cs" />
+    <Compile Include="Core\src\Senders\Misc\SDKSender.cs" />
+    <Compile Include="Core\src\Senders\QuickSender.cs" />
+    <Compile Include="Core\src\Senders\Server\PermissionSender.cs" />
+    <Compile Include="Core\src\Senders\Player\PlayerSender.cs" />
+    <Compile Include="Core\src\Senders\Level\ArenaSender.cs" />
+    <Compile Include="Core\src\Senders\Server\ConnectionSender.cs" />
+    <Compile Include="Core\src\Senders\Props\EnemySender.cs" />
+    <Compile Include="Core\src\Senders\Props\KeySender.cs" />
+    <Compile Include="Core\src\Senders\Level\GameControllerSender.cs" />
+    <Compile Include="Core\src\Senders\Server\LoadSender.cs" />
+    <Compile Include="Core\src\Senders\Player\PullCordSender.cs" />
+    <Compile Include="Core\src\Senders\Gamemode\GamemodeSender.cs" />
+    <Compile Include="Core\src\Senders\Props\PropSender.cs" />
+    <Compile Include="Core\src\Senders\Props\SpawnSender.cs" />
+    <Compile Include="Core\src\Senders\Server\TimeScaleSender.cs" />
+    <Compile Include="Core\src\Senders\Level\TrialSender.cs" />
+    <Compile Include="Core\src\Senders\Level\CampaignSender.cs" />
+    <Compile Include="Core\src\Syncables\ConstraintSyncable.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\PowerableJointExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\TwoButtonRemoteControllerExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\FunicularControllerExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\FlyingGunExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\GripExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\KeyRecieverExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\SyncGameObjectEnabledExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\SpawnGunExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\EscalatorExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\TriggerRefProxyExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\BehaviourBaseNavExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\BehaviourOmniwheelExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\BehaviourPowerLegsExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\BoardGeneratorExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\ConstrainerExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\KeyExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\PropFlashlightExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\PropCollisionSyncerExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\PropLifeCycleEvents.cs" />
+    <Compile Include="Core\src\Syncables\SyncBlacklist.cs" />
+    <Compile Include="Core\src\UI\FusionUITrigger.cs" />
+    <Compile Include="Core\src\UI\InfoBoxPanelView.cs" />
+    <Compile Include="Core\src\Utilities\AssemblyUtilities.cs" />
+    <Compile Include="Core\src\Utilities\ByteRetriever.cs" />
+    <Compile Include="Core\src\Utilities\CommonBarcodes.cs" />
+    <Compile Include="Core\src\Utilities\DllTools.cs" />
+    <Compile Include="Core\src\Network\Helpers\Net.cs" />
+    <Compile Include="Core\src\Network\Helpers\NetworkHelper.cs" />
+    <Compile Include="Core\src\Network\Internal\InternalLayerHelpers.cs" />
+    <Compile Include="Core\src\Network\Helpers\MessageSender.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\ArenaMenuMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\GeoSelectMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\ChallengeSelectMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Arena\ArenaTransitionMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\DescentElevatorMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\MagmaGateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Campaign\DescentNooseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Combat\GunShotMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Combat\PuppetMasterKillMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Destruction\ObjectDestructableDestroyMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Destruction\PropHealthDestroyMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\FusionMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\FusionMessageHandler.cs" />
+    <Compile Include="Core\src\Network\Messages\FusionReader.cs" />
+    <Compile Include="Core\src\Network\Messages\FusionWriter.cs" />
+    <Compile Include="Core\src\Network\Messages\Global\WorldGravityMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\PlayerRepSeatMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\SimpleGripEventMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Inventory\InventorySlotDropMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Inventory\InventorySlotInsertMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\PlayerRepForceGrabMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\PlayerRepGrabMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Interaction\PlayerRepReleaseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Levels\SceneLoadMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Magazines\MagazineEjectMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Magazines\MagazineInsertMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\NativeMessageTag.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepAvatarMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepRagdollMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepGameworldMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepTransformMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Representation\PlayerRepVitalsMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\ConnectionResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\ConnectionRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Server\DisconnectMessage.cs" />
+    <Compile Include="Core\src\Network\Helpers\NetworkInfo.cs" />
+    <Compile Include="Core\src\Network\Internal\InternalServerHelpers.cs" />
+    <Compile Include="Core\src\Network\Messages\Spawning\DespawnResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Spawning\DespawnRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Spawning\SpawnRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Spawning\SpawnResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\PropSyncableCreateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\PropSyncableUpdateMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\SyncableIDResponseMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\SyncableIDRequestMessage.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\SyncableOwnershipResponse.cs" />
+    <Compile Include="Core\src\Network\Messages\Syncables\SyncableOwnershipRequest.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamConnectionManager.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamNetworkLayer.cs" />
+    <Compile Include="Core\src\Network\NetworkLayer.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamSocketManager.cs" />
+    <Compile Include="Core\src\Network\Steam\SteamSocketHandler.cs" />
+    <Compile Include="Core\src\Patching\NativeStructs\HandGripPair_.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\ArenaPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\AssetPooleePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ChunkTriggerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\DescentPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\GrabPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\GunPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\HandJointConfigurationPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\InventorySlotReceiverPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\InventoryAmmoReceiverPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\UI\LevelsPanelViewPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Levels\MagmaGatePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ObjectDestructablePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\OpenControllerRigPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\GameworldSkeletonRigPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\PhysicsRigPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\PlayerHealthPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Plugs\PlugPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PopUpMenuPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PropHealthPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\PuppetMasterPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\SceneStreamerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\SeatPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\SimpleGripEventsPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\SubBehaviourHealthPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Trigger\TriggerLasersPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Unity\PhysicsPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\Player\VirtualControllerPatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ZonePatches.cs" />
+    <Compile Include="Core\src\Patching\Patches\ZoneSpawnerPatches.cs" />
+    <Compile Include="Core\src\Representation\PlayerId.cs" />
+    <Compile Include="Core\src\Representation\PlayerIdManager.cs" />
+    <Compile Include="Core\src\Representation\PlayerRep.cs" />
+    <Compile Include="Core\src\Representation\PlayerRepUtilities.cs" />
+    <Compile Include="Core\src\SDK\Modules\Module.cs" />
+    <Compile Include="Core\src\SDK\Modules\ModuleHandler.cs" />
+    <Compile Include="Core\src\SDK\Modules\ModuleInfo.cs" />
+    <Compile Include="Core\src\SDK\Modules\ModuleLogger.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\ObjectDestructableExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\PropHealthExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\SimpleGripEventsExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\SeatExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\AIBrainExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\PuppetMasterExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\AmmoSocketExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\IPropExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\GunExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\MagazineExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\WeaponSlotExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\PropComponentArrayExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\PropComponentExtender.cs" />
+    <Compile Include="Core\src\Syncables\Prop\Extenders\PropExtenderManager.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionOverrides.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionPointItemLoader.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionContentLoader.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionComponentCache.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionDevTools.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionAudio.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionPlayer.cs" />
+    <Compile Include="Core\src\SDK\Points\PointShopHelper.cs" />
+    <Compile Include="Core\src\UI\InfoBox.cs" />
+    <Compile Include="Core\src\UI\InfoBoxHelper.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\Scene\FusionSceneManager.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\Scene\FusionSceneHooks.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\Scene\FusionSceneStatus.cs" />
+    <Compile Include="Core\src\Utilities\GameObjectUtilities.cs" />
+    <Compile Include="Core\src\Utilities\ImpactUtilities.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionBundleLoader.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionNotifier.cs" />
+    <Compile Include="Core\src\Utilities\Internal\PooleePusher.cs" />
+    <Compile Include="Core\src\Utilities\Internal\SafeEvents.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\MultiplayerHooking.cs" />
+    <Compile Include="Core\src\Preferences\FusionPref.cs" />
+    <Compile Include="Core\src\Utilities\Internal\PatchingUtilities.cs" />
+    <Compile Include="Core\src\Utilities\Internal\BigEndianHelper.cs" />
+    <Compile Include="Core\src\Utilities\Fusion\FusionLogger.cs" />
+    <Compile Include="Core\src\Syncables\ISyncable.cs" />
+    <Compile Include="Core\src\Syncables\Prop\PropSyncable.cs" />
+    <Compile Include="Core\src\Syncables\SyncManager.cs" />
+    <Compile Include="Core\src\Utilities\Internal\PersistentAssetCreator.cs" />
+    <Compile Include="Core\src\Utilities\Internal\PhysicsUtilities.cs" />
+    <Compile Include="Core\src\Preferences\FusionPreferences.cs" />
+    <Compile Include="Core\src\Utilities\Internal\StaticGripFixer.cs" />
+    <Compile Include="Core\src\Utilities\PlayerAdditionsHelper.cs" />
+    <Compile Include="Core\src\Utilities\PooleeUtilities.cs" />
+    <Compile Include="Core\src\Utilities\SafetyUtilities.cs" />
+    <Compile Include="Core\src\Utilities\TriggerUtilities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Core\resources\lib\x86_64\steam_api64.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=2.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BoneLib, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Core\dependencies\BoneLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>bin\Release\Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Compiler">
+      <HintPath>bin\Release\Boo.Lang.Compiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Extensions">
+      <HintPath>bin\Release\Boo.Lang.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Parser">
+      <HintPath>bin\Release\Boo.Lang.Parser.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.PatternMatching">
+      <HintPath>bin\Release\Boo.Lang.PatternMatching.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang.Useful">
+      <HintPath>bin\Release\Boo.Lang.Useful.dll</HintPath>
+    </Reference>
+    <Reference Include="ch.sycoforge.Decal">
+      <HintPath>bin\Release\ch.sycoforge.Decal.dll</HintPath>
+    </Reference>
+    <Reference Include="Commons.Xml.Relaxng">
+      <HintPath>bin\Release\Commons.Xml.Relaxng.dll</HintPath>
+    </Reference>
+    <Reference Include="cscompmgd, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\cscompmgd.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf">
+      <HintPath>bin\Release\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Grpc.Core">
+      <HintPath>bin\Release\Grpc.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Iced">
+      <HintPath>bin\Release\Iced.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppMono.Security">
+      <HintPath>bin\Release\Il2CppMono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2Cppmscorlib, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Il2Cppmscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppNewtonsoft.Json">
+      <HintPath>bin\Release\Il2CppNewtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Il2CppSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Configuration">
+      <HintPath>bin\Release\Il2CppSystem.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Il2CppSystem.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Data">
+      <HintPath>bin\Release\Il2CppSystem.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.IO.Compression">
+      <HintPath>bin\Release\Il2CppSystem.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Numerics">
+      <HintPath>bin\Release\Il2CppSystem.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Runtime.Serialization">
+      <HintPath>bin\Release\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.ServiceModel.Internals">
+      <HintPath>bin\Release\Il2CppSystem.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml">
+      <HintPath>bin\Release\Il2CppSystem.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Il2CppSystem.Xml.Linq">
+      <HintPath>bin\Release\Il2CppSystem.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="MelonLoader, Version=0.5.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\MelonLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="MeshBakerCore">
+      <HintPath>bin\Release\MeshBakerCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>bin\Release\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NavMeshComponents">
+      <HintPath>bin\Release\NavMeshComponents.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.Platform">
+      <HintPath>bin\Release\Oculus.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Oculus.VR">
+      <HintPath>bin\Release\Oculus.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="RayFireAssembly">
+      <HintPath>bin\Release\RayFireAssembly.dll</HintPath>
+    </Reference>
+    <Reference Include="RFLib_DotNet_2018">
+      <HintPath>bin\Release\RFLib_DotNet_2018.dll</HintPath>
+    </Reference>
+    <Reference Include="SLZ.Algorithms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\SLZ.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="SLZ.Marrow, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\SLZ.Marrow.dll</HintPath>
+    </Reference>
+    <Reference Include="SLZ.Marrow.SDK, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\SLZ.Marrow.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="SLZ.Serialize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\SLZ.Serialize.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Selectors" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Json">
+      <HintPath>bin\Release\System.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Core\managed\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.DurableInstancing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Discovery" />
+    <Reference Include="System.ServiceModel.Internals, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Core\managed\System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Routing" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Http">
+      <HintPath>bin\Release\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost">
+      <HintPath>bin\Release\System.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>bin\Release\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>bin\Release\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>bin\Release\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.WebPages">
+      <HintPath>bin\Release\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>bin\Release\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>bin\Release\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UltEvents">
+      <HintPath>bin\Release\UltEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerBaseLib, Version=0.4.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnhollowerBaseLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UnhollowerRuntimeLib, Version=0.4.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnhollowerRuntimeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UniTask.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Addressables, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UniTask.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="UniTask.Linq, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UniTask.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Animation.Rigging.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Barracuda.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Barracuda.BurstBLAS, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Barracuda.BurstBLAS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe, Version=4.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ML-Agents, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.ML-Agents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ML-Agents.CommunicatorObjects, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.ML-Agents.CommunicatorObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>bin\Release\Unity.ProBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.KdTree">
+      <HintPath>bin\Release\Unity.ProBuilder.KdTree.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.Poly2Tri">
+      <HintPath>bin\Release\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Profiling.Core, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Profiling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.StressLevelZero.VRS">
+      <HintPath>bin\Release\Unity.RenderPipelines.Universal.StressLevelZero.VRS.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Splines.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Splines.Examples, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Splines.Examples.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARFoundation">
+      <HintPath>bin\Release\Unity.XR.ARFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.ARSubsystems">
+      <HintPath>bin\Release\Unity.XR.ARSubsystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.CoreUtils">
+      <HintPath>bin\Release\Unity.XR.CoreUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Interaction.Toolkit">
+      <HintPath>bin\Release\Unity.XR.Interaction.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Management, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.MockHMD, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.MockHMD.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.Oculus, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.Oculus.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.OpenXR.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.ConformanceAutomation, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.OpenXR.Features.ConformanceAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.MockRuntime, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.OpenXR.Features.MockRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.OculusQuestSupport, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.OpenXR.Features.OculusQuestSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.XR.OpenXR.Features.RuntimeDebugger, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Unity.XR.OpenXR.Features.RuntimeDebugger.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppAssetBundleManager, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Il2CppImageConversionManager, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsNativeModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UIElementsNativeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="ValueTupleBridge">
+      <HintPath>bin\Release\ValueTupleBridge.dll</HintPath>
+    </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>bin\Release\websocket-sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Whinarn.UnityMeshSimplifier.Runtime">
+      <HintPath>bin\Release\Whinarn.UnityMeshSimplifier.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Core\Fusion Bundles\.gitignore" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_AppenBeyuge.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_FreqCreepInModulationBuggyPhysics.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_SicklyBugInitiative.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_SmigglesInDespair.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_SyntheticCavernsRemix.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\Deathmatch\music_WWWonderlan.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\music_GeoGrpFellDownTheStairs.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Music\music_TrinketsAndGizmos.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\stinger_FailPurchase.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\stinger_SuccessPurchase.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\sting_DMTie.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\sting_LavaGangFailure.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\sting_LavaGangVictory.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\sting_sabrelakeFailure.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\Stingers\sting_sabrelakeVictory.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\UI\UI_Beep_Bend_Short_stereo.wav" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\UI\ui_EquipItem.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\UI\UI_Error_Double_Note_Down_Notch_stereo.wav" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\UI\UI_SCI-FI_Confirm_Dry_stereo.wav" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\AudioClip\UI\ui_UnequipItem.ogg" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Info Box\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Info Box\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Info Box\MAS INFO BOX.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Point Shop\Atlas Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Point Shop\Atlas_62350.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Point Shop\Atlas_Emmission.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\Point Shop\Atlas_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\texture_monogon_warnings.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\tex_lavaGangLogo.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\tex_Peter.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\tex_sabreLakeLogo.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\CornerPanelRadius_12px_Fill.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\PopUpArrowsRadius_0px_Fill.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\ui_Bit.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\ui_Border.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\ui_Help.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\ui_Unknown.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\MAS 3d.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\preview_Glasses3D.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\IndyMas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\preview_AdventureHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Bits Trail\Bit Trail.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Bits Trail\preview_BitsTrail.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\Pillow Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\preview_BodyPillow.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\ARMY MAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\preview_BritishHelm.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\Cardbiard_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\Cardbiard_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\Cardboard Disguise MA.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\preview_CardboardDisguise.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\CardBoard Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\Cardboard Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\CardboardBaseColor.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\preview_CardboardTophat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\Cat Beanie Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\preview_CatBeanie.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\Cheese Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\preview_CheeseHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\Construction Helmet.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\Material_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\Material_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\preview_ConstructionHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\Cooler Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\Material.001_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\Material.001_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\preview_Cooler.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\Elton Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\preview_EltonGlasses.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\ENaMAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\preview_EnaHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\Fez Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\preview_Fez.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\Firework Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\preview_Firework.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\Fren Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\preview_Fren.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\Frycook Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\preview_FryCookHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\Gear Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\preview_Gearhead.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\preview_Gemstone.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\tex_GemstoneAlbedo.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\tex_GemstoneEmmisive.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\tex_GemstoneMAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\tex_GemstoneNormal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gloop Trail\preview_GloopTrail.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gloop Trail\WaterDropParticle.tif" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\Helmet MAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\preview_GuardHelmet.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\preview_Junktion.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\tex_JunktionAlbedo.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\tex_JunktionMAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\tex_JunktionNormal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\KickmeMAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\preview_KickMeSign.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\Knoll Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\preview_KnollHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\Layton Hat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\Layton Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\LaytonMas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\preview_LaytonHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\Lego Head_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\Lego Head_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\Lego Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\preview_LegoHead.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lightning Head\preview_LightningHead.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\Monocle Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\preview_Monocle.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Nyan Trail\preview_NyanTrail.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\Party Hat Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\preview_PartyHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\Piece Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\preview_PieceOfResistance.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\ColorNoiseTrippy.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\DummyMAS_shiny_metalic.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\preview_PulsatingMass.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\T_Waves_01_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\preview_RubixCube.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\tex_RubixAlbedo.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\tex_RubixMAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\preview_SorcererHat.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\SorcereMas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\Sorcerers Hat_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\Sorcerers Hat_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\Circle Particle.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\Cloud.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\preview_StormyHead.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\Base Base Color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\preview_TestItem.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\TEST MAS.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\4.bp.blogspot.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\Beacon Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\preview_TheBeacon.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Waist Ring\EnergyEffect.tif" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Waist Ring\preview_WaistRing.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\DefaultMaterial_Base_color.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\DefaultMaterial_Normal.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\preview_WeirdShades.png" />
+    <Content Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\Shiny Mas.png" />
+    <Content Include="Core\Fusion Bundles\Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <Content Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <Content Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <Content Include="Core\Fusion Bundles\Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <Content Include="Core\Fusion Bundles\Assets\TextMesh Pro\Sprites\EmojiOne.png" />
+    <Content Include="Core\Fusion Bundles\ProjectSettings\ProjectVersion.txt" />
+    <Content Include="Core\src\AssemblyInfo.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AssemblyInfo.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Core\resources\bundles\Android\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <EmbeddedResource Include="Core\resources\bundles\StandaloneWindows64\content_bundle.fusion" />
+    <EmbeddedResource Include="Core\resources\bundles\StandaloneWindows64\item_bundle.fusion" />
+    <None Include="Core\Fusion Bundles\.vsconfig" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Animations\anim_ForceFieldPulse.anim" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Animations\ForceField.controller" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Fonts\ArlonSemiBold-DEMO SDF.asset" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Fonts\ArlonSemiBold-DEMO.otf" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Materials\mat_EntangledLine.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Materials\mat_ForceField.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Materials\mat_InfoBox.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Materials\mat_monogonWarnings.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Materials\mat_PointShop.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Meshes\InfoBox.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Meshes\monogon_poster_in_game_OutOfOrder.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Meshes\VendorAtlas.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\button_arrow.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\button_infoBox.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\button_pointShop.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\machine_InfoBox.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\machine_PointShop.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Prefabs\renderer_EntangledLine.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\CornerPanelRadius_12px_Fill.asset" />
+    <None Include="Core\Fusion Bundles\Assets\Content\Texture2D\UI\PopUpArrowsRadius_0px_Fill.asset" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\3D Glasses.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\item_Glasses3D.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\3D Glasses\mat_3DGlasses.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\Adventure Hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\item_AdventureHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\AdventureHat\mat_AdventureHat.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Bits Trail\Bit.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Bits Trail\item_BitsTrail.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Bits Trail\mat_BitsTrail.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\Body Pillow.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\item_BodyPillow.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BodyPillow\mat_BodyPillow.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\bRITISH army Helm.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\item_BritishHelm.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\BritishHelm\mat_BritishHelm.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\Cardboard Disguise.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\item_CardboardDisguise.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Disguise\mat_CardboardDisguise.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\CardboardTophat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\item_CardboardTophat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cardboard Tophat\mat_CardboardTophat.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\Cat Beanie.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\item_CatBeanie.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cat Beanie\mat_CatBeanie.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\Cheest hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\item_CheeseHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cheese Hat\mat_CheeseHat.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\Construction Hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\item_ConstructionHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Construction Hat\mat_ConstructionHat.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\Cooler.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\item_Cooler.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Cooler\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\Elton Glasses.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\item_EltonGlasses.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Elton Glasses\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\Ena Hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\item_EnaHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Ena Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\Fez.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\item_Fez.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fez\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\Firework.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\item_Firework.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Firework\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\anim_frenJump.anim" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\anim_frenRotate.anim" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\Fren.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\item_Fren.controller" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\item_Fren.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Fren\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\Frycook hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\item_FryCookHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\FryCook Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\Gearhead.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\item_Gearhead.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gearhead\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\item_Gemstone.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\mat_Gemstone.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gemstone\mesh_Gemstone.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gloop Trail\item_GloopTrail.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Gloop Trail\mat_gloopTrail.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\Guard Helmet.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\item_GuardHelmet.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Guard Helmet\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\item_Junktion.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\Junktion.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Junk-tion\mat_junktion.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\item_KickMeSign.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\Kick Me Sign.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Kick Me Sign\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\Arnyhat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\item_KnollHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Knoll Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\item_LaytonHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\LaytonsHat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Layton Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\item_LegoHead.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\Lego Head.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lego Head\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lightning Head\item_LightningHead.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lightning Head\Lightning Effect.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Lightning Head\Lightning head Effect.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\item_Monocle.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Monocle\Monocle.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Nyan Trail\item_NyanTrail.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Nyan Trail\New Material.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Nyan Trail\Nyan Trail.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Nyan Trail\nyancat.tga" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\item_PartyHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Party Hat\Party Hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\item_PieceOfResistance.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Piece Of Resistance\Piece.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\anim_pulsatingMassWrithe.anim" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\item_PulsatingMass.controller" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\item_PulsatingMass.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\mat_pulsatingMass.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Pulsating Mass\mesh_voidSphere.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\anim_rubixSpin.anim" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\item_RubixCube.controller" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\item_RubixCube.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\mat_RubixCube.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Rubix Cube\mesh_RubixCube.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\item_SorcererHat.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Sorcerer Hat\Sorcerers Hat.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\item_StormyHead.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\New Material 1.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\New Material.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Stormy Head\Storm Head.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\item_TestItem.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Test Item\Test.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\item_TheBeacon.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\New Material.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\Particle Effect.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\The beacon.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\The Beacon\The beacon.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Waist Ring\item_WaistRing.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Waist Ring\New Material.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\item_WeirdShades.prefab" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\mat_BaseItem.mat" />
+    <None Include="Core\Fusion Bundles\Assets\Point Items\Cosmetics\Weird Shades\Weird Shades.fbx" />
+    <None Include="Core\Fusion Bundles\Assets\Scenes\SampleScene.unity" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Documentation\TextMesh Pro User Guide 2016.pdf" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Fonts\LiberationSans.ttf" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Fonts &amp; Materials\LiberationSans SDF - Drop Shadow.mat" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Fonts &amp; Materials\LiberationSans SDF - Fallback.asset" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Fonts &amp; Materials\LiberationSans SDF - Outline.mat" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Fonts &amp; Materials\LiberationSans SDF.asset" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Sprite Assets\EmojiOne.asset" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\Style Sheets\Default Style Sheet.asset" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Resources\TMP Settings.asset" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Core\Fusion Bundles\Assets\TextMesh Pro\Sprites\EmojiOne.json" />
+    <None Include="Core\Fusion Bundles\Assets\UniversalRenderPipelineGlobalSettings.asset" />
+    <None Include="Core\Fusion Bundles\Assets\XR\Loaders\Mock HMD Loader.asset" />
+    <None Include="Core\Fusion Bundles\Assets\XR\Loaders\Oculus Loader.asset" />
+    <None Include="Core\Fusion Bundles\Assets\XR\Settings\Mock HMD Build Settings.asset" />
+    <None Include="Core\Fusion Bundles\Assets\XR\Settings\Oculus Settings.asset" />
+    <None Include="Core\Fusion Bundles\Assets\XR\XRGeneralSettings.asset" />
+    <None Include="Core\Fusion Bundles\Assets\_MarrowAssets\Settings\TextureStreamSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\AudioManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\boot.config" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\BurstAotSettings_Android.json" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\BurstAotSettings_StandaloneWindows.json" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\ClusterInputManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\CommonBurstAotSettings.json" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\DynamicsManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\EditorBuildSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\EditorSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\GraphicsSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\InputManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\MemorySettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\NavMeshAreas.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\PackageManagerSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\Physics2DSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\PresetManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\ProjectSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\QualitySettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\SceneTemplateSettings.json" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\ShaderGraphSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\TagManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\TimelineSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\TimeManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\UnityConnectSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\URPProjectSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\VersionControlSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\VFXManager.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\XRPackageSettings.asset" />
+    <None Include="Core\Fusion Bundles\ProjectSettings\XRSettings.asset" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
